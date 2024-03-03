@@ -1,0 +1,24 @@
+Codebook for COURSERA Getting and Cleaning Data course project
+
+The result of this codebook is "SecondData.txt" of this repository.
+README.txt provides you with a helpful background to understand this data set.
+
+SecondData.txt: separated by space, the first row contains the names of the 437 variables, each row from the second row is for each subject and each activity
+Subject: identifier, integer, ranges from 1 to 30
+Activity: identifier, string with 6 possible values
+ #1=WALKING, 2=WALKING_UPSTAIRS, 3=WALKING_DOWNSTAIRS, 4=SITTING, 5=STANDING, 6=LAYING
+Measurements: floating-point values between -1 and 1
+ #class: time-domain signals(starting with t), frequency-domain signals(starting with f)
+ #signals are measured in the X, Y and Z directions
+Features: names of measurements
+
+Source Data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The transformation applied to the source data are as follows:
+
+Training and Test sets were merged into one data set.
+Measurements on mean and standard deviation were extracted to separate data sets (mean, std).
+Activity identifiers were replaced with descriptive variable names (e.g. 1->WALKING)
+Variable names (column names) were replaced with descriptive variable names with features.txt.
+Mean of each measurement was calculated by each subject and each activity.
+
+Please refer to run_analysis.R for detailed code.
